@@ -14,7 +14,7 @@ A script to simulate confetti particles 🎉.
 
 ## Parameters
 
-![Fake Confetti Particles Parameters](examples/fake-Confetti-particles-parameters.png)
+![Fake Confetti Particles Parameters](examples/fake-confetti-particles-parameters.png)
 
 ### Emitting
 

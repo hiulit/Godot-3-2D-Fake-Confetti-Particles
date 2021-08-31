@@ -12,7 +12,7 @@ config_version=4
 
 config/name="Godot 3 2D Fake Confetti Particles"
 config/description="A script to simulate confetti particles 🎉."
-run/main_scene="res://fake-confetti-particles.tscn"
+run/main_scene="res://fakeConfettiParticles.tscn"
 config/icon="res://icon.png"
 config/version="1.0.0"
 

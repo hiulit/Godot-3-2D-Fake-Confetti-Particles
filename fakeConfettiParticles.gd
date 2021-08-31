@@ -3,11 +3,9 @@ extends Node2D
 
 ## If `true`, particles are being emitted.
 export (bool) var emitting = false setget _set_emitting
-## The type of particles.
-##
-## Can be:
-## - `Square (0)`.
-## - `Circle (1)`.
+## The type of particles:
+## - `0 (Square)`.
+## - `1 (Circle)`.
 export (int, "Square", "Circle") var type = 0
 ## The number of particles.
 export (int) var amount = 150

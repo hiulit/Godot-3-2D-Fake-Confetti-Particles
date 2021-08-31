@@ -1,27 +1,47 @@
 tool
 extends Node2D
 
+## If `true`, particles are being emitted.
 export (bool) var emitting = false setget _set_emitting
+## The type of particles.
+##
+## Can be:
+## - `Square (0)`.
+## - `Circle (1)`.
 export (int, "Square", "Circle") var type = 0
+## The number of particles.
 export (int) var amount = 150
+## If `true`, the number of particles can be a \
+## random number between `amount / 2` and `amount * 2`.
+##
+## If `false`, the number of particles will be the exact number in @link amount.
 export (bool) var random_amount = true
+## The size of the particles.
+##
+## If the particles are squares, `size` is the length of their sides.
+## If the particles are circles, `size` is their radius.
 export (float) var size = 3.0
+## If `true`, the size of the particles can be a \
+## random number between `size / 2` and `size * 2`.
+##
+## If `false`, the size of particles will be the exact number in @link size.
 export (bool) var random_size = true
+## Controls the visibility of the particles.
 export (Rect2) var visibility_rect = Rect2(0.0, 0.0, 1024.0, 600.0)
-export (Array) var colors = [
-	Color("#008751"),
-	Color("#00e436"),
-	Color("#29adff"),
-	Color("#7e2553"),
-	Color("#83769c"),
-	Color("#ff004d"),
-	Color("#ff77a8"),
-	Color("#ffa300"),
-	Color("#ffec27"),
-]
+## The color/s of the particles.
+export (Array) var colors = [Color("#008751"), Color("#00e436"), Color("#29adff"), Color("#7e2553"), Color("#83769c"), Color("#ff004d"), Color("#ff77a8"), Color("#ffa300"), Color("#ffec27")]
+## If `true`, the initial position of the particles \
+## can be a random position in @link visibility_rect.
+##
+## If `false`, the initial position of the particles will be `Vector(0, 0)`.
 export (bool) var random_position = true
+## If `true`, only one emission cycle occurs.
 export (bool) var one_shot = false
+## If `true`, the particles will gradually fade.
+##
+## If `false`, the particles will end abruptly.
 export (bool) var fade = true
+## The duration (in seconds) of the emission cycle.
 export (float) var timer_wait_time = 1.0
 
 var particles = []

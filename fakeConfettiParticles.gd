@@ -1,5 +1,7 @@
 tool
 extends Node2D
+## Draw-based 2D confetti particles emitter.
+class_name FakeConfettiParticles
 
 ## If `true`, particles are being emitted.
 export (bool) var emitting = false setget _set_emitting
@@ -12,7 +14,7 @@ export (int) var amount = 150
 ## If `true`, the number of particles can be a \
 ## random number between `amount / 2` and `amount * 2`.
 ##
-## If `false`, the number of particles will be the exact number in @link amount.
+## If `false`, the number of particles will be the exact number in @link_var {amount}.
 export (bool) var random_amount = true
 ## The size of the particles.
 ##
@@ -22,14 +24,14 @@ export (float) var size = 3.0
 ## If `true`, the size of the particles can be a \
 ## random number between `size / 2` and `size * 2`.
 ##
-## If `false`, the size of particles will be the exact number in @link size.
+## If `false`, the size of the particles will be the exact number in @link_var {size}.
 export (bool) var random_size = true
 ## Controls the visibility of the particles.
 export (Rect2) var visibility_rect = Rect2(0.0, 0.0, 1024.0, 600.0)
 ## The color/s of the particles.
 export (Array) var colors = [Color("#008751"), Color("#00e436"), Color("#29adff"), Color("#7e2553"), Color("#83769c"), Color("#ff004d"), Color("#ff77a8"), Color("#ffa300"), Color("#ffec27")]
 ## If `true`, the initial position of the particles \
-## can be a random position in @link visibility_rect.
+## can be a random position in @link_var {visibility_rect}.
 ##
 ## If `false`, the initial position of the particles will be `Vector(0, 0)`.
 export (bool) var random_position = true

@@ -25,6 +25,15 @@ config/description="A script to simulate confetti particles 🎉."
 run/main_scene="res://fake_confetti_particles.tscn"
 config/icon="res://icon.png"
 config/version="1.0.0"
+config/godot_version="3.x"
+config/license="MIT"
+config/author="hiulit"
+config/banner="../examples/fake_confetti_particles_example.gif"
+config/patreon="https://www.patreon.com/hiulit"
+config/ko-fi="https://ko-fi.com/F2F7136ND"
+config/buymeacoffee="https://www.buymeacoffee.com/hiulit"
+config/paypal="https://www.paypal.com/paypalme/hiulit"
+config/repository="https://github.com/hiulit/Godot-3-2D-Fake-Confetti-Particles"
 
 [physics]
 

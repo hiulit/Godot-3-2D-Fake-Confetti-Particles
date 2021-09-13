@@ -123,12 +123,12 @@ export (Rect2) var visibility_rect = Rect2(0.0, 0.0, 1024.0, 600.0)
 The color/s of the particles.
 
 ```gdscript
-export (Array) var colors = [
+export (Array) var colors = [Color("#008751"),Color("#00e436"),Color("#29adff"),Color("#7e2553"),Color("#83769c"),Color("#ff004d"),Color("#ff77a8"),Color("#ffa300"),Color("#ffec27")]
 ```
 
 |Name|Type|Default|
 |:-|:-|:-|
-|`colors`|`Array`|`[`|
+|`colors`|`Array`|`[Color("#008751"),Color("#00e436"),Color("#29adff"),Color("#7e2553"),Color("#83769c"),Color("#ff004d"),Color("#ff77a8"),Color("#ffa300"),Color("#ffec27")]`|
 
 ### random_position
 

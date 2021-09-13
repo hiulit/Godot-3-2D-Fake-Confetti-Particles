@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "FakeConfettiParticles",
+"language": "GDScript",
+"path": "res://fake_confetti_particles.gd"
+} ]
+_global_script_class_icons={
+"FakeConfettiParticles": ""
+}
+
 [application]
 
 config/name="Godot 3 2D Fake Confetti Particles"

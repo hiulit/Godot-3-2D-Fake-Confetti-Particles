@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="Godot 3 2D Fake Confetti Particles"
 config/description="A script to simulate confetti particles 🎉."
-run/main_scene="res://fakeConfettiParticles.tscn"
+run/main_scene="res://fake_confetti_particles.tscn"
 config/icon="res://icon.png"
 config/version="1.0.0"
 

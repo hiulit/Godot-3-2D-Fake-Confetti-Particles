@@ -213,13 +213,15 @@ If you can't, consider sharing it with the world...
 
 [![Share on Twitter](https://img.shields.io/badge/Share_on_Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/intent/tweet?url=https://github.com/hiulit/Godot-3-2D-Fake-Confetti-Particles&text=%22Godot%203%202D%20Fake%20Confetti%20Particles%22%0AA%20script%20to%20simulate%20confetti%20particles%20%F0%9F%8E%89.%0A%0ABy%20@hiulit%0A%0A)
 
-or giving it a [star](https://github.com/hiulit/Godot-3-2D-Fake-Confetti-Particles/stargazers).
+... or giving it a [star](https://github.com/hiulit/Godot-3-2D-Fake-Confetti-Particles/stargazers).
 
 Thank you very much!
 
 ## 📝 Licenses
 
 - Source code: [MIT License](/LICENSE).
-- [GDScriptify](https://github.com/hiulit/gdscriptify): [MIT License](/GDSCRIPTIFY_LICENSE).
+- Documentation: ([GDScriptify](https://github.com/hiulit/gdscriptify)): [MIT License](/GDSCRIPTIFY_LICENSE).
+
+---
 
 Powered by [GDScriptify](https://github.com/hiulit/gdscriptify).

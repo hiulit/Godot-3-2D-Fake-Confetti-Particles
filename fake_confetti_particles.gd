@@ -6,12 +6,13 @@ class_name FakeConfettiParticles
 ## If `true`, particles are being emitted.
 export (bool) var emitting = false setget _set_emitting
 ## The type of particles:
+##
 ## - `0 (Square)`.
 ## - `1 (Circle)`.
 export (int, "Square", "Circle") var type = 0
 ## The number of particles.
 export (int) var amount = 150
-## If `true`, the number of particles can be a \
+## If `true`, the number of particles can be a
 ## random number between `amount / 2` and `amount * 2`.
 ##
 ## If `false`, the number of particles will be the exact number in @link_var {amount}.
@@ -21,7 +22,7 @@ export (bool) var random_amount = true
 ## If the particles are squares, `size` is the length of their sides.
 ## If the particles are circles, `size` is their radius.
 export (float) var size = 3.0
-## If `true`, the size of the particles can be a \
+## If `true`, the size of the particles can be a
 ## random number between `size / 2` and `size * 2`.
 ##
 ## If `false`, the size of the particles will be the exact number in @link_var {size}.
@@ -40,7 +41,7 @@ export (Array) var colors = [
 	Color("#ffa300"),
 	Color("#ffec27")
 ]
-## If `true`, the initial position of the particles \
+## If `true`, the initial position of the particles
 ## can be a random position in @link_var {visibility_rect}.
 ##
 ## If `false`, the initial position of the particles will be `Vector(0, 0)`.

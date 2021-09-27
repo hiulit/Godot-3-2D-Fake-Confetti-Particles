@@ -10,28 +10,30 @@ A script to simulate confetti particles 🎉.
 
 ### Variables
 
-- [emitting](#emitting)
-- [type](#type)
-- [amount](#amount)
-- [random_amount](#random_amount)
-- [size](#size)
-- [random_size](#random_size)
-- [visibility_rect](#visibility_rect)
-- [colors](#colors)
-- [random_position](#random_position)
-- [one_shot](#one_shot)
-- [fade](#fade)
-- [timer_wait_time](#timer_wait_time)
+|Name|Type|Default|
+|:-|:-|:-|
+|[emitting](#emitting)|`bool`|`false`|
+|[type](#type)|`int`|`0`|
+|[amount](#amount)|`int`|`150`|
+|[random_amount](#random_amount)|`bool`|`true`|
+|[size](#size)|`float`|`3.0`|
+|[random_size](#random_size)|`bool`|`true`|
+|[visibility_rect](#visibility_rect)|`Rect2`|`Rect2(0.0, 0.0, 1024.0, 600.0)`|
+|[colors](#colors)|`Array`|`[Color("#008751"),Color("#00e436"),Color("#29adff"),Color("#7e2553"),Color("#83769c"),Color("#ff004d"),Color("#ff77a8"),Color("#ffa300"),Color("#ffec27")]`|
+|[random_position](#random_position)|`bool`|`true`|
+|[one_shot](#one_shot)|`bool`|`false`|
+|[fade](#fade)|`bool`|`true`|
+|[timer_wait_time](#timer_wait_time)|`float`|`1.0`|
 
 ## Variables
 
 ### emitting
 
-If `true`, particles are being emitted.
-
 ```gdscript
 export (bool) var emitting = false setget _set_emitting
 ```
+
+If `true`, particles are being emitted.
 
 |Name|Type|Default|Setter|
 |:-|:-|:-|:-|
@@ -39,13 +41,15 @@ export (bool) var emitting = false setget _set_emitting
 
 ### type
 
-The type of particles:
-- `0 (Square)`.
-- `1 (Circle)`.
-
 ```gdscript
 export (int, "Square", "Circle") var type = 0
 ```
+
+The type of particles:
+
+
+- `0 (Square)`.
+- `1 (Circle)`.
 
 |Name|Type|Default|
 |:-|:-|:-|
@@ -53,11 +57,11 @@ export (int, "Square", "Circle") var type = 0
 
 ### amount
 
-The number of particles.
-
 ```gdscript
 export (int) var amount = 150
 ```
+
+The number of particles.
 
 |Name|Type|Default|
 |:-|:-|:-|
@@ -65,13 +69,14 @@ export (int) var amount = 150
 
 ### random_amount
 
-If `true`, the number of particles can be a  random number between `amount / 2` and `amount * 2`.
-
-If `false`, the number of particles will be the exact number in [amount](#amount).
-
 ```gdscript
 export (bool) var random_amount = true
 ```
+
+If `true`, the number of particles can be a
+random number between `amount / 2` and `amount * 2`.
+
+ If `false`, the number of particles will be the exact number in [amount](#amount).
 
 |Name|Type|Default|
 |:-|:-|:-|
@@ -79,14 +84,13 @@ export (bool) var random_amount = true
 
 ### size
 
-The size of the particles.
-
-If the particles are squares, `size` is the length of their sides.
-If the particles are circles, `size` is their radius.
-
 ```gdscript
 export (float) var size = 3.0
 ```
+
+The size of the particles.
+
+ If the particles are squares, `size` is the length of their sides. If the particles are circles, `size` is their radius.
 
 |Name|Type|Default|
 |:-|:-|:-|
@@ -94,13 +98,14 @@ export (float) var size = 3.0
 
 ### random_size
 
-If `true`, the size of the particles can be a  random number between `size / 2` and `size * 2`.
-
-If `false`, the size of the particles will be the exact number in [size](#size).
-
 ```gdscript
 export (bool) var random_size = true
 ```
+
+If `true`, the size of the particles can be a
+random number between `size / 2` and `size * 2`.
+
+ If `false`, the size of the particles will be the exact number in [size](#size).
 
 |Name|Type|Default|
 |:-|:-|:-|
@@ -108,11 +113,11 @@ export (bool) var random_size = true
 
 ### visibility_rect
 
-Controls the visibility of the particles.
-
 ```gdscript
 export (Rect2) var visibility_rect = Rect2(0.0, 0.0, 1024.0, 600.0)
 ```
+
+Controls the visibility of the particles.
 
 |Name|Type|Default|
 |:-|:-|:-|
@@ -120,11 +125,11 @@ export (Rect2) var visibility_rect = Rect2(0.0, 0.0, 1024.0, 600.0)
 
 ### colors
 
-The color/s of the particles.
-
 ```gdscript
 export (Array) var colors = [Color("#008751"),Color("#00e436"),Color("#29adff"),Color("#7e2553"),Color("#83769c"),Color("#ff004d"),Color("#ff77a8"),Color("#ffa300"),Color("#ffec27")]
 ```
+
+The color/s of the particles.
 
 |Name|Type|Default|
 |:-|:-|:-|
@@ -132,13 +137,13 @@ export (Array) var colors = [Color("#008751"),Color("#00e436"),Color("#29adff"),
 
 ### random_position
 
-If `true`, the initial position of the particles  can be a random position in [visibility_rect](#visibility_rect).
-
-If `false`, the initial position of the particles will be `Vector(0, 0)`.
-
 ```gdscript
 export (bool) var random_position = true
 ```
+
+If `true`, the initial position of the particles can be a random position in [visibility_rect](#visibility_rect).
+
+ If `false`, the initial position of the particles will be `Vector(0, 0)`.
 
 |Name|Type|Default|
 |:-|:-|:-|
@@ -146,11 +151,11 @@ export (bool) var random_position = true
 
 ### one_shot
 
-If `true`, only one emission cycle occurs.
-
 ```gdscript
 export (bool) var one_shot = false
 ```
+
+If `true`, only one emission cycle occurs.
 
 |Name|Type|Default|
 |:-|:-|:-|
@@ -158,13 +163,13 @@ export (bool) var one_shot = false
 
 ### fade
 
-If `true`, the particles will gradually fade.
-
-If `false`, the particles will end abruptly.
-
 ```gdscript
 export (bool) var fade = true
 ```
+
+If `true`, the particles will gradually fade.
+
+ If `false`, the particles will end abruptly.
 
 |Name|Type|Default|
 |:-|:-|:-|
@@ -172,11 +177,11 @@ export (bool) var fade = true
 
 ### timer_wait_time
 
-The duration (in seconds) of the emission cycle.
-
 ```gdscript
 export (float) var timer_wait_time = 1.0
 ```
+
+The duration (in seconds) of the emission cycle.
 
 |Name|Type|Default|
 |:-|:-|:-|

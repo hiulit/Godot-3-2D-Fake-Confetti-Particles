@@ -15,7 +15,7 @@ export (int) var amount = 150
 ## If `true`, the number of particles can be a
 ## random number between `amount / 2` and `amount * 2`.
 ##
-## If `false`, the number of particles will be the exact number in @link_var {amount}.
+## If `false`, the number of particles will be the exact number in @link_name {amount}.
 export (bool) var random_amount = true
 ## The size of the particles.
 ##
@@ -25,7 +25,7 @@ export (float) var size = 3.0
 ## If `true`, the size of the particles can be a
 ## random number between `size / 2` and `size * 2`.
 ##
-## If `false`, the size of the particles will be the exact number in @link_var {size}.
+## If `false`, the size of the particles will be the exact number in @link_name {size}.
 export (bool) var random_size = true
 ## Controls the visibility of the particles.
 export (Rect2) var visibility_rect = Rect2(0.0, 0.0, 1024.0, 600.0)
@@ -42,7 +42,7 @@ export (Array) var colors = [
 	Color("#ffec27")
 ]
 ## If `true`, the initial position of the particles
-## can be a random position in @link_var {visibility_rect}.
+## can be a random position in @link_name {visibility_rect}.
 ##
 ## If `false`, the initial position of the particles will be `Vector(0, 0)`.
 export (bool) var random_position = true

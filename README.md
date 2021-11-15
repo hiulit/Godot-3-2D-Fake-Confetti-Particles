@@ -73,8 +73,7 @@ The number of particles.
 export (bool) var random_amount = true
 ```
 
-If `true`, the number of particles can be a
-random number between `amount / 2` and `amount * 2`.
+If `true`, the number of particles can be a random number between `amount / 2` and `amount * 2`.
 
  If `false`, the number of particles will be the exact number in [amount](#amount).
 
@@ -102,8 +101,7 @@ The size of the particles.
 export (bool) var random_size = true
 ```
 
-If `true`, the size of the particles can be a
-random number between `size / 2` and `size * 2`.
+If `true`, the size of the particles can be a random number between `size / 2` and `size * 2`.
 
  If `false`, the size of the particles will be the exact number in [size](#size).
 
@@ -208,9 +206,7 @@ If you find this project helpful, please consider supporting it through any size
 
 [![Become a patron](https://img.shields.io/badge/Become_a_patron-ff424d?logo=Patreon&style=for-the-badge&logoColor=white)](https://www.patreon.com/hiulit)
 
-[![Suppor me on Ko-Fi](https://img.shields.io/badge/Support_me_on_Ko--fi-F16061?logo=Ko-fi&style=for-the-badge&logoColor=white)](https://ko-fi.com/F2F7136ND)
-
-[![Buy me a coffee](https://img.shields.io/badge/Buy_me_a_coffee-FFDD00?logo=buy-me-a-coffee&style=for-the-badge&logoColor=black)](https://www.buymeacoffee.com/hiulit)
+[![Suppor me on Ko-Fi](https://img.shields.io/badge/Support_me_on_Ko--fi-F16061?logo=Ko-fi&style=for-the-badge&logoColor=white)](https://ko-fi.com/hiulit)
 
 [![Donate Paypal](https://img.shields.io/badge/PayPal-00457C?logo=PayPal&style=for-the-badge&label=Donate)](https://www.paypal.com/paypalme/hiulit)
 
@@ -225,8 +221,8 @@ Thank you very much!
 ## 📝 Licenses
 
 - Source code: [MIT License](/LICENSE).
-- Documentation ([GDScriptify](https://github.com/hiulit/gdscriptify)): [MIT License](/LICENSE_GDSCRIPTIFY.txt).
+- Documentation ([GDScriptify](https://github.com/hiulit/GDScriptify)): [MIT License](/LICENSE_GDSCRIPTIFY.txt).
 
 ---
 
-Powered by [GDScriptify](https://github.com/hiulit/gdscriptify).
+Powered by [GDScriptify](https://github.com/hiulit/GDScriptify).

@@ -1,36 +1,37 @@
-tool
+@tool
 extends Node2D
+
 ## Draw-based 2D confetti particles emitter.
 class_name FakeConfettiParticles
 
 ## If `true`, particles are being emitted.
-export (bool) var emitting = false setget _set_emitting
+@export var emitting: bool = false: set = _set_emitting 
 ## The type of particles:
 ##
 ## - `0 (Square)`.
 ## - `1 (Circle)`.
-export (int, "Square", "Circle") var type = 0
+@export_enum("Square", "Circle") var type: int = 0
 ## The number of particles.
-export (int) var amount = 150
+@export var amount: int  = 150
 ## If `true`, the number of particles can be a
 ## random number between `amount / 2` and `amount * 2`.
 ##
 ## If `false`, the number of particles will be the exact number in @link_name {amount}.
-export (bool) var random_amount = true
+@export var random_amount: bool = true
 ## The size of the particles.
 ##
 ## If the particles are squares, `size` is the length of their sides.
 ## If the particles are circles, `size` is their radius.
-export (float) var size = 3.0
+@export var size: float = 3.0
 ## If `true`, the size of the particles can be a
 ## random number between `size / 2` and `size * 2`.
 ##
 ## If `false`, the size of the particles will be the exact number in @link_name {size}.
-export (bool) var random_size = true
+@export var random_size: bool = true
 ## Controls the visibility of the particles.
-export (Rect2) var visibility_rect = Rect2(0.0, 0.0, 1024.0, 600.0)
+@export var visibility_rect: Rect2 = Rect2(0.0, 0.0, 1024.0, 600.0)
 ## The color/s of the particles.
-export (Array) var colors = [
+@export var colors: Array = [
 	Color("#008751"),
 	Color("#00e436"),
 	Color("#29adff"),
@@ -45,25 +46,24 @@ export (Array) var colors = [
 ## can be a random position in @link_name {visibility_rect}.
 ##
 ## If `false`, the initial position of the particles will be `Vector(0, 0)`.
-export (bool) var random_position = true
+@export var random_position: bool = true
 ## If `true`, only one emission cycle occurs.
-export (bool) var one_shot = false
+@export var one_shot: bool = false
 ## If `true`, the particles will gradually fade.
 ##
 ## If `false`, the particles will end abruptly.
-export (bool) var fade = true
+@export var fade: bool = true
 ## The duration (in seconds) of the emission cycle.
-export (float) var timer_wait_time = 1.0
+@export var timer_wait_time: float = 1.0
 
 var particles = []
 var particles_amount
 var particles_position
 var timer = 0.0
 
-
 func _ready():
 	set_process(false)
-	self.emitting = not Engine.editor_hint
+	self.emitting = not Engine.is_editor_hint()
 
 
 func _process(delta):
@@ -74,14 +74,14 @@ func _process(delta):
 
 		if one_shot:
 			self.emitting = false
-			if not Engine.editor_hint:
+			if not Engine.is_editor_hint():
 				queue_free()
 		else:
 			_create_particles()
-
+	
 	_particles_explode(delta)
-
-	update()
+	
+	queue_redraw()
 
 
 func _draw():
@@ -138,16 +138,16 @@ func _get_random_color():
 
 
 func _get_random_gravity():
-	return Vector2(rand_range(-200, 200), rand_range(400, 800))
+	return Vector2(randi_range(-200, 200), randi_range(400, 800))
 
 
 func _get_random_amount():
-	return round(rand_range(amount / 2.0, amount * 2.0))
+	return round(randf_range(amount / 2.0, amount * 2.0))
 
 
 func _get_random_position():
-	var x = rand_range(0, visibility_rect.size.x)
-	var y = rand_range(0, visibility_rect.size.y)
+	var x = randf_range(0.0, visibility_rect.size.x)
+	var y = randf_range(0.0, visibility_rect.size.y)
 
 	return Vector2(x, y)
 
@@ -161,7 +161,7 @@ func _get_random_size():
 
 
 func _get_random_velocity():
-	return Vector2(rand_range(-200, 200), rand_range(-600, -800))
+	return Vector2(randi_range(-200, 200), randi_range(-600, -800))
 
 
 func _set_emitting(new_value):
@@ -175,5 +175,7 @@ func _set_emitting(new_value):
 			set_process(false)
 			particles.clear()
 			timer = 0.0
-			update()
-			property_list_changed_notify()
+			queue_redraw()
+			notify_property_list_changed()
+
+
